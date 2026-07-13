@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Schachtpumpe</title>
+</head>
+
+<body>
+
+<h1>💧 Schachtpumpe</h1>
+
+<p>Wasserstand: <span id="wasserstand"></span></p>
+<p>Gießmodus: <span id="giessmodus"></span></p>
+<p>Nächster Gießtermin: <span id="termin"></span></p>
+<p><b id="hinweis"></b></p>
+
+<script>
+fetch('status.json')
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('wasserstand').innerHTML =
+      data.wasserstand + " von " + data.max;
+
+    document.getElementById('giessmodus').innerHTML =
+      data.giessmodus;
+
+    document.getElementById('termin').innerHTML =
+      data.naechsterTermin;
+
+    document.getElementById('hinweis').innerHTML =
+      data.hinweis;
+  });
+</script>
+
+</body>
+</html>
