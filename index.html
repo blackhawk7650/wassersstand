@@ -1,38 +1,73 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
 <meta charset="utf-8">
 <title>Schachtpumpe</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1 {
+    color: #0b6fa4;
+}
+
+.box {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.hinweis {
+    background: #eef6ff;
+    border-left: 4px solid #0b6fa4;
+    padding: 10px;
+}
+
+.stand {
+    color: #666;
+    font-size: 0.9em;
+}
+</style>
+
 </head>
 
 <body>
 
 <h1>💧 Schachtpumpe</h1>
 
-<p>Wasserstand: <span id="wasserstand"></span></p>
-<p>Gießmodus: <span id="giessmodus"></span></p>
-<p>Nächster Gießtermin: <span id="termin"></span></p>
-<p><b id="hinweis"></b></p>
+<div class="box">
+    <h2>Aktueller Status</h2>
 
-<script>
-fetch('status.json')
-  .then(r => r.json())
-  .then(data => {
-    document.getElementById('wasserstand').innerHTML =
-      data.wasserstand + " von " + data.max;
+    <p><b>Wasserstand:</b> 1 von 6</p>
 
-    document.getElementById('giessmodus').innerHTML =
-      data.giessmodus;
+    <p><b>Gießmodus:</b> OFF</p>
 
-    document.getElementById('termin').innerHTML =
-      data.naechsterTermin;
+    <p><b>Nächster Gießtermin:</b><br>
+    15.07.2026 13:30 bis 15.07.2026 14:30</p>
 
-    document.getElementById('hinweis').innerHTML =
-      data.hinweis;
-  });
-</script>
+    <p><b>🌧 Regen nächste 5 Tage:</b>
+    16.19 mm</p>
+</div>
+
+<div class="box hinweis">
+    <b>💡 Hinweis:</b><br><br>
+    Bei niedrigem Wasserstand kann es sinnvoll sein,
+    einen Gießtermin bereits am Vorabend beginnen zu lassen,
+    damit vor dem Gießen Wasser gesammelt werden kann.
+</div>
+
+<div class="stand">
+    🕒 Aktualisiert: 14.07.2026 12:01:03
+</div>
 
 </body>
 </html>
-<p>Test Tue Jul 14 10:50:28 AM CEST 2026</p>
-<p>Automatik-Test</p>
