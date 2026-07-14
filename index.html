@@ -1,72 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
+
 <head>
 <meta charset="utf-8">
 <title>Schachtpumpe</title>
 
 <style>
+
 body {
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px;
+    margin: auto;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: #f5f5f5;
     color: #333;
 }
 
-h1 {
-    color: #0b6fa4;
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-.box {
-    background: white;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+h1 {
+    color: #006699;
+}
+
+.wasserstand {
+    color: red;
+    font-size: 1.4em;
+    font-weight: bold;
 }
 
 .hinweis {
-    background: #eef6ff;
-    border-left: 4px solid #0b6fa4;
+    margin-top: 20px;
     padding: 10px;
+    background: #eef6ff;
+    border-left: 5px solid #006699;
 }
 
-.stand {
+.zeit {
+    margin-top: 20px;
     color: #666;
     font-size: 0.9em;
 }
+
 </style>
 
 </head>
 
 <body>
 
+<div class="card">
+
 <h1>💧 Schachtpumpe</h1>
 
-<div class="box">
-    <h2>Aktueller Status</h2>
+<h2>Aktueller Status</h2>
 
-    <p><b>Wasserstand:</b> 3 von 6</p>
+<p class="wasserstand">
+Wasserstand: 1 von 6
+</p>
 
-    <p><b>Gießmodus:</b> OFF</p>
+<p>
+<strong>Gießmodus:</strong> AUS
+</p>
 
-    <p><b>Nächster Gießtermin:</b><br>
-    15.07.2026 13:30 bis 15.07.2026 14:30</p>
+<p>
+<strong>📅 Nächster Gießtermin:</strong><br>
+15.07.2026
+13:30 - 14:30
+</p>
 
-    <p><b>🌧 Regen nächste 5 Tage:</b>
-    16.2 mm</p>
+<p>
+<strong>🌧 Regen nächste 5 Tage:</strong>
+16.19 mm
+</p>
+
+<div class="hinweis">
+<strong>💡 Hinweis:</strong><br><br>
+
+Bei niedrigem Wasserstand kann es sinnvoll sein,
+einen Gießtermin bereits am Vorabend beginnen zu lassen,
+damit vor dem Gießen Wasser gesammelt werden kann.
 </div>
 
-<div class="box hinweis">
-    <b>💡 Hinweis:</b><br><br>
-    Bei niedrigem Wasserstand kann es sinnvoll sein,
-    einen Gießtermin bereits am Vorabend beginnen zu lassen,
-    damit vor dem Gießen Wasser gesammelt werden kann.
+<div class="zeit">
+🕒 Aktualisiert: 14.07.2026 12:06:47
 </div>
 
-<div class="stand">
-    🕒 Aktualisiert: 14.07.2026 12:05:11
 </div>
 
 </body>
